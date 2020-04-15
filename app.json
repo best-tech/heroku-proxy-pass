@@ -1,0 +1,25 @@
+{
+    "name": "Heroku http proxy-pass",
+    "description": "Прокси",
+    "keywords": [
+      "proxy"
+    ],
+    "website": "https://github.com/best-tech/heroku-proxy-pass",
+    "repository": "https://github.com/best-tech/heroku-proxy-pass",
+    "scripts": {
+      "postdeploy": "bundle exec rake bootstrap"
+    },
+    "env": {
+      "PROXY_PASS": {
+        "description": "Путь перенаправления",
+        "value": "https://aviasales.ru/?marker=18479",
+        "required": true
+      }
+    },
+    
+    "buildpacks": [
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-nginx"
+      }
+    ]
+  }
