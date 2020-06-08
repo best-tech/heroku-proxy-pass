@@ -11,6 +11,11 @@
         "description": "Путь перенаправления",
         "value": "https://aviasales.ru/?marker=18479",
         "required": true
+      },
+      "HEADER_HOST": {
+        "description": "Заголовок Host",
+        "value": "aviasales.ru",
+        "required": true
       }
     },
     "buildpacks": [
