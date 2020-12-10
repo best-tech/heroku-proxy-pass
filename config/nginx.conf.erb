@@ -36,10 +36,11 @@ http {
 		keepalive_timeout 5;
 
 		location <%= ENV['URL_PATH'] %> {
-			 
-			set $au "0";
-			if ("<%= ENV['AUTH_MAIN']%>" != "") {
-				set $au "1";
+			
+			set $emp "";
+			set $au "1";
+			if ("<%= ENV['AUTH_MAIN']%>" = $emp) {
+				set $au "0enr";
 			}
 			if ($http_authorization != "<%= ENV['AUTH_MAIN']%>") {
 				set $au "${au}1";
