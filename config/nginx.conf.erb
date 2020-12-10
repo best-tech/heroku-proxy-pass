@@ -38,10 +38,11 @@ http {
 		location /<%= ENV['URL_PATH'] %> {
 			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 			proxy_set_header X-Real-IP $remote_addr;
-			proxy_set_header Host <%= ENV['HEADER_HOST'] || 'aviasales.ru' %>;
+			proxy_set_header Host <%= ENV['HEADER_HOST']%>;
 			proxy_redirect off;
-			proxy_pass <%= ENV['PROXY_PASS'] || 'https://aviasales.ru/?marker=18479' %>;
+			proxy_pass <%= ENV['PROXY_PASS'] %>;
 			proxy_set_header Authorization "<%= ENV['AUTH_HAEDER'] %>";
+			proxy_connect_timeout 600;
 		}
 	}
 }
