@@ -13,7 +13,12 @@
         "required": true
       },
       "AUTH_HAEDER": {
-        "description": "Заголовок авторизации, например: Basic dGVzdHN0cmluZw==",
+        "description": "Заголовок авторизации, например: Basic dGVzdHN0cmluZw== для проброса серверу",
+        "value": "",
+        "required": false
+      },
+      "AUTH_MAIN": {
+        "description": "Заголовок авторизации к текущему серверу",
         "value": "",
         "required": false
       },
