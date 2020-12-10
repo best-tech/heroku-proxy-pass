@@ -12,6 +12,16 @@
         "value": "https://aviasales.ru/?marker=18479",
         "required": true
       },
+      "AUTH_HAEDER": {
+        "description": "Заголовок авторизации, например: Basic dGVzdHN0cmluZw==",
+        "value": "",
+        "required": false
+      },
+      "URL_PATH": {
+        "description": "Путь URL",
+        "value": "",
+        "required": false
+      },
       "HEADER_HOST": {
         "description": "Заголовок Host",
         "value": "aviasales.ru",
