@@ -18,9 +18,9 @@
         "required": false
       },
       "URL_PATH": {
-        "description": "Путь URL",
-        "value": "",
-        "required": false
+        "description": "Значение Location",
+        "value": "/",
+        "required": true
       },
       "HEADER_HOST": {
         "description": "Заголовок Host",
