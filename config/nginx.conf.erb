@@ -52,7 +52,6 @@ http {
 			proxy_set_header X-Real-IP $remote_addr;
 			proxy_set_header Host <%= ENV['HEADER_HOST']%>;
 			proxy_ssl_server_name on;
-   			proxy_ssl_server_name "<%= ENV['HEADER_HOST']%>";
 			proxy_redirect off;
 			proxy_pass <%= ENV['PROXY_PASS'] %>;
 			proxy_set_header Authorization "<%= ENV['AUTH_HAEDER'] %>";
